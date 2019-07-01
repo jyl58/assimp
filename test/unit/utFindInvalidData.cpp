@@ -3,7 +3,8 @@
 Open Asset Import Library (assimp)
 ---------------------------------------------------------------------------
 
-Copyright (c) 2006-2017, assimp team
+Copyright (c) 2006-2019, assimp team
+
 
 
 All rights reserved.
@@ -41,9 +42,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 #include "UnitTestPCH.h"
 
-#include <FindInvalidDataProcess.h>
-#include "../../include/assimp/mesh.h"
-
+#include "PostProcessing/FindInvalidDataProcess.h"
+#include <assimp/mesh.h>
 
 using namespace std;
 using namespace Assimp;
@@ -60,8 +60,7 @@ protected:
 };
 
 // ------------------------------------------------------------------------------------------------
-void FindInvalidDataProcessTest::SetUp()
-{
+void FindInvalidDataProcessTest::SetUp() {
     ASSERT_TRUE( AI_MAX_NUMBER_OF_TEXTURECOORDS >= 3);
 
     piProcess = new FindInvalidDataProcess();
